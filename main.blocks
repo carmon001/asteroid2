@@ -1,0 +1,35 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="#yHC*R3u:W{TT$VI!{=[">Player</variable><variable type="KIND_SpriteKind" id="T9rywO?.$l,fk6h(32%{">Projectile</variable><variable type="KIND_SpriteKind" id="HMKE+7fF^dKbXdVu0oUM">Food</variable><variable type="KIND_SpriteKind" id=".hZb|PiNnz98pR.9T)^?">Enemy</variable><variable id="V4~DJHiA=hcy5NEH.s3l">joker</variable><variable id=":0v3pLFkZKf82iTWl$]^">mySprite</variable><variable id="@Kr#jOm^RHNvYv4$3i93">projectile</variable></variables><block type="pxt-on-start" x="-70" y="-90"><statement name="HANDLER"><block type="function_call"><mutation name="hero" functionid="_RD7Me%:6CdXV3uy0FiH"/></block></statement></block><block type="function_definition" x="650" y="10"><mutation name="overlap" functionid="ow!CW62xF[*4xgO8%)ei"/><field name="function_name"/></block><block type="function_definition" x="-10" y="210"><mutation name="hero" functionid="_RD7Me%:6CdXV3uy0FiH"/><field name="function_name"/><statement name="STACK"><block type="variables_set"><field name="VAR" id="V4~DJHiA=hcy5NEH.s3l">joker</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . f f f f . . . . . . . . 
+. . . f 7 7 7 7 f . . . . . . . 
+. . f 7 7 7 7 7 7 f . . . . . . 
+. f 1 7 7 1 1 7 7 7 f . . . . . 
+f 1 1 7 1 1 1 1 7 7 7 f . . . . 
+f 1 1 1 1 1 f 1 1 7 7 f . . . . 
+f f 1 1 1 f 1 d 1 7 1 f . . . . 
+f 1 f 1 f f 1 1 d 1 1 f . . . . 
+f 1 f 1 f f 1 1 d 1 f . . . . . 
+f 1 1 1 1 1 1 2 1 1 f . . . . . 
+. f 1 2 2 2 2 1 1 f . . . . . . 
+. . f 1 1 1 1 1 f . . . . . . . 
+. . . f f f f f . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="spritesetpos"><value name="sprite"><block type="variables_get"><field name="VAR" id="V4~DJHiA=hcy5NEH.s3l">joker</field></block></value><value name="x"><shadow type="positionPicker"><field name="index">78</field></shadow></value><value name="y"><shadow type="positionPicker"><field name="index">97</field></shadow></value><next><block type="game_control_sprite"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="2" _input_init="true"></mutation><value name="sprite"><block type="variables_get"><field name="VAR" id="V4~DJHiA=hcy5NEH.s3l">joker</field></block></value><value name="vx"><shadow type="math_number"><field name="NUM">100</field></shadow></value><value name="vy"><shadow type="math_number"><field name="NUM">0</field></shadow></value></block></next></block></next></block></statement></block><block type="function_definition" x="550" y="250"><mutation name="projectile" functionid="lhVbRavNx?G$,4?8[D#B"/><field name="function_name"/><statement name="STACK"><block type="variables_set"><field name="VAR" id="@Kr#jOm^RHNvYv4$3i93">projectile</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreateprojectilefromside"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . 5 . . 5 . 5 . . 5 . . . . 
+. . 5 . . . 5 5 5 . . . 5 . . . 
+. 5 5 . . . 5 5 5 . . . 5 5 . . 
+5 5 5 5 . 5 5 5 5 5 . 5 5 5 5 . 
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+. 5 5 . 5 . 5 5 5 . 5 . 5 5 . . 
+. . 5 . . . . 5 . . . . 5 . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="vx"><shadow type="spriteSpeedPicker"><field name="speed">0</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker"><field name="speed">0</field></shadow></value></block></value></block></statement></block><block type="function_definition" x="330" y="450"><mutation name="score" functionid="^{#aYdSbk%tVm=-#H#h8"/><field name="function_name"/><statement name="STACK"><block type="hudChangeScoreBy"><value name="value"><shadow type="math_number"><field name="NUM">1</field></shadow></value></block></statement></block><block type="gameinterval" x="750" y="430"><value name="period"><shadow type="timePicker"><field name="ms">200</field></shadow></value><statement name="HANDLER"><block type="function_call"><mutation name="projectile" functionid="lhVbRavNx?G$,4?8[D#B"/><next><block type="function_call"><mutation name="score" functionid="^{#aYdSbk%tVm=-#H#h8"/></block></next></block></statement></block><block type="spritesoverlap" x="59" y="620"><value name="HANDLER_DRAG_PARAM_sprite"><shadow type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">sprite</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value><value name="HANDLER_DRAG_PARAM_otherSprite"><shadow type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">otherSprite</field></shadow></value><value name="otherKind"><shadow type="spritekind"><field name="MEMBER">Projectile</field></shadow></value><statement name="HANDLER"><block type="function_call"><mutation name="overlap" functionid="ow!CW62xF[*4xgO8%)ei"/><next><block type="gameOver"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="win"><shadow type="toggleWinLose"><field name="win">false</field></shadow></value></block></next></block></statement></block></xml>
